@@ -111,6 +111,7 @@ Before starting the setup, the following prerequisites must be met:
    * Navigate to **Tjenesteudbydere**.
    * Click **Opret ny tjenesteudbyder**.
    * Enter information:
+      * **Protokol**: Select "OpenID Connect" in the dropdown
       * **Navn**: \<municipality name\>-OS2display
       * **Angiv subjekt**: upn
       * **Klienttype**: Confidential client
