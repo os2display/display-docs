@@ -7,6 +7,9 @@ favicon_ico: "/assets/site/favicon.ico"
 
 color_scheme: os2display
 
+plugins:
+  - jekyll-redirect-from
+
 aux_links:
   "github.com/os2display":
       - "//github.com/os2display"
