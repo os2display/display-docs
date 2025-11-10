@@ -1,6 +1,7 @@
 ---
 title: Afspilningsenheder
 layout: default
+parent: Brugermanual
 nav_order: 1
 has_children: false
 ---
