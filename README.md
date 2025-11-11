@@ -1,9 +1,3 @@
----
-title: Readme
-layout: default
-nav_order: 6
----
-
 # OS2Display documentation readme
 
 This repository contains documentation for OS2Display. The documentation is build and published 
