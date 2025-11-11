@@ -1,6 +1,7 @@
 ---
 title: SSO Setup
 layout: default
+parent: Installation og drift
 nav_order: 4
 has_children: false
 ---
