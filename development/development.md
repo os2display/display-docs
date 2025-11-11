@@ -1,11 +1,12 @@
 ---
-title: Development
+title: Development Setup
 layout: default
 parent: Udvikling
+nav_order: 1
 has_children: false
 ---
 
-# Development
+# Development Setup
 
 To work on the complete system with API, admin, client and templates each project's docker-compose file should be started.
 
