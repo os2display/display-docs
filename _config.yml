@@ -10,6 +10,14 @@ color_scheme: os2display
 plugins:
   - jekyll-redirect-from
 
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+      nav_exclude: false
+      
 aux_links:
   "github.com/os2display":
       - "//github.com/os2display"
