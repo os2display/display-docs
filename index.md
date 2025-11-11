@@ -12,10 +12,6 @@ This repository contains documentation for OS2Display.
 
 See [changelog.md](CHANGELOG) for a list of changes.
 
-## Roadmap
-
-See [roadmap.md](roadmap) for a plan upcoming changes.
-
 ## Development setup
 
 See [development.md](development/development) for a description of how to make changes to the project.
