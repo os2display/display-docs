@@ -1,9 +1,3 @@
----
-title: Governance Report
-layout: default
-nav_order: 5
----
-
 # OS2displays' Governance Report 
 
 Dene checkliste er baseret på [OS2s standard governance rapport](https://github.com/OS2offdig/Governance_Reports). Det er en checklist som skal tydeliggøre i hvilken grad produktet efterlever OS2s governance model.
