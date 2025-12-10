@@ -1,7 +1,7 @@
 ---
 title: Brugermanual
 layout: default
-nav_order: 2
+redirect_to: user_manual/log_in.html
 has_children: true
 ---
 Brugermanual

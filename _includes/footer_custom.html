@@ -1,0 +1,36 @@
+{% if page.parent and page.nav_order %}
+  {% assign parent_pages = site.html_pages | where: "parent", page.parent | where_exp: "item", "item.nav_order != nil" | sort: "nav_order" %}
+  {% assign current_index = -1 %}
+  {% for p in parent_pages %}
+    {% if p.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if current_index >= 0 %}
+    {% assign prev_index = current_index | minus: 1 %}
+    {% assign next_index = current_index | plus: 1 %}
+    
+    <nav aria-label="Page navigation" class="d-flex flex-justify-between mb-4">
+      <div>
+        {% if prev_index >= 0 %}
+          {% assign prev_page = parent_pages[prev_index] %}
+          <a href="{{ prev_page.url | relative_url }}" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" class="icon" style="width: 16px; height: 16px; vertical-align: middle;"><use xlink:href="#svg-arrow-right" transform="rotate(180 12 12)"></use></svg>
+            {{ prev_page.title }}
+          </a>
+        {% endif %}
+      </div>
+      <div class="text-right">
+        {% if next_index < parent_pages.size %}
+          {% assign next_page = parent_pages[next_index] %}
+          <a href="{{ next_page.url | relative_url }}" class="btn btn-outline">
+            {{ next_page.title }}
+            <svg viewBox="0 0 24 24" class="icon" style="width: 16px; height: 16px; vertical-align: middle;"><use xlink:href="#svg-arrow-right"></use></svg>
+          </a>
+        {% endif %}
+      </div>
+    </nav>
+  {% endif %}
+{% endif %}

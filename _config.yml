@@ -17,14 +17,29 @@ defaults:
     values:
       layout: "default"
       nav_exclude: false
-      
+
 aux_links:
-  "github.com/os2display":
-      - "//github.com/os2display"
-  "os2.eu/os2display":
+  "OS2Display på os2.eu":
     - "//www.os2.eu/os2display"
+
+nav_external_links:
+  - title: OS2Display på GitHub
+    url: //github.com/os2display/display-api-service
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
   version: "9.1.3"
+
+collections:
+  news:
+    output: true
+
+just_the_docs:
+  collections:
+    news:
+      name: Nyheder
+      search_exclude: false
+
