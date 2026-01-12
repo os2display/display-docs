@@ -11,7 +11,7 @@ layout: default
     <h2 class="fs-7 fw-500 text-grey-dk-200 mb-4 mt-4">Nyheder</h2>
     {% for news_item in site.news %}
       <div class="p-4 mb-4 bg-grey-lt-000 d-block">
-        <h3 class="fs-5 fw-500 mb-2 mt-3"><a href="{{ news_item.url }}" class="text-blue-200 fw-700">{{ news_item.title }}</a></h3>
+        <h3 class="fs-5 fw-500 mb-2 mt-3"><a href="{{ site.baseurl }}{{ news_item.url }}" class="text-blue-200 fw-700">{{ news_item.title }}</a></h3>
         <p class="fs-3 text-grey-dk-100 mb-2 fw-300">{{ news_item.date | date: "%B %d, %Y" }}</p>
         <p class="fs-4 text-grey-dk-200 lh-default">{{ news_item.summary }}</p>
       </div>
