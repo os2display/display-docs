@@ -1,5 +1,5 @@
 ---
-title: Forside
+title: Home
 layout: frontpage
 nav_order: 1
 ---

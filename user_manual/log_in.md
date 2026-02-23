@@ -1,7 +1,7 @@
 ---
 title: Log ind
 layout: default
-parent: Brugermanual
+parent: Sådan bruger du OS2Display
 nav_order: 1
 has_children: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: Afspilningsenheder
 layout: default
-parent: Brugermanual
+parent: Sådan bruger du OS2Display
 nav_order: 50
 has_children: false
 ---

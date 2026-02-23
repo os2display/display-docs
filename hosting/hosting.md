@@ -1,7 +1,7 @@
 ---
 title: Hosting
-parent: Installation og drift
 layout: default
+parent: For driftsleverandører
 nav_order: 3
 has_children: false
 ---

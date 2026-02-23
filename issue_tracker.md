@@ -1,6 +1,6 @@
 ---
-title: "Issue Tracker"
-nav_order: 2
+title: "Fejlfinding og support"
+nav_order: 3
 ---
 # Issue Tracker
 
