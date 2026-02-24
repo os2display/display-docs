@@ -33,5 +33,7 @@ Under feltet forfattertekst finder du endnu et billedfelt. Her kan du placere et
 
 Nederst i skabelonen, under Opsætning, angiver du slidets varighed i sekunder.  
 
+
 |Systemnavn:                    |book-review  |
+|-----------------------------|-----------|
 |Kræver OS2Display datakilde:   |Nej          |
