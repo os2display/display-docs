@@ -8,3 +8,5 @@ has_children: false
 
 |Systemnavn:                    |image-text   |
 |Kræver OS2Display datakilde:   |Nej          |
+
+Anvendes til de fleste opslag. Hvis man har en færdiglavet fil med billede og tekst, kan man uploade den her. Definerer man ikke en tekst i tekstfeltet, vil billedet blot blive vist.  
