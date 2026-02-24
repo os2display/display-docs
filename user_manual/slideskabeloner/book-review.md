@@ -6,9 +6,11 @@ has_children: false
 ---
 # Anmeldelse
 
-![Log ind siden](../../assets/anmeldelse.png)
-
 Denne skabelon har tekst til venstre og billede til højre. Den er oprindelig tænkt som en skabelon til anbefaling af bøger på et bibliotek, men kan bruges til alle typer indhold, hvor man ønsker en kortere tekst til venstre på skærmen, suppleret af et billede til højre. 
+
+![Felter i anmeldelse skabelonen](../../assets/anmeldelse.png)
+
+
 
 Skabelonen består af felterne: 
 
