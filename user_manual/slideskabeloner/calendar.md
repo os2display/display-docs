@@ -41,3 +41,9 @@ Et særligt layout som understøtter straks-booking fra skærmen (kræver særli
 #### Diverse ekstra layout-muligheder 
 
 I de følgende formularfelter gives diverse muligheder for at ændre i opsætningen af fx rækkefølgen på oplysningerne og visning af dato og tidspunkt. 
+
+|Fakta om skabelonen           | |
+|-----------------------------|-----------|
+|Kræver OS2Display datakilde: | Ja |
+|Kompatible feed output models: |Calendar |
+|Kompatible Datakilde Typer: |CalendarAPI, Koba |
