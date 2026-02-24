@@ -9,6 +9,10 @@ Skabelonen gør det muligt at opsætte indhold i en tabel. Først tilføjes kolo
 
 ![Felter i tabel skabelonen](../../assets/tabel.png)
 
+#### Tabel fra datakilde 
+
+Det skal undersøges om denne funktion virker
+
 ---
 
 |Fakta om skabelonen           | |
