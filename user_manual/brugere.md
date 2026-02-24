@@ -17,4 +17,6 @@ Begge får redaktør-adgang til Området, men brugeradministratoren har mulighed
 Aktiveringskoden giver adgang til et område i OS2Display. 
 Alle kan logge ind i OS2Display via MitID, men hvis man ikke har adgang til noget område, vil man blive mødt af et felt, hvor ens unikke kode skal indtastes. 
 
+Aktiveringskoden er aktiv i to døgn fra udstedelse og skal manuelt videredistribueres til den person, som skal have ekstern adgang til området. 
+
 INDSÆT BILLEDE
