@@ -8,7 +8,7 @@ has_children: false
 
 Anvendes til de fleste opslag. Hvis man har en færdiglavet fil med billede og tekst, kan man uploade den her. Definerer man ikke en tekst i tekstfeltet, vil billedet blot blive vist.  
 
-![Felter i billede og tekst skabelonen](../../assets/billede-og-tekst.png)
+![Felter i billede og tekst skabelonen](../../assets/tekst-og-billede.png)
 
 #### Overskrift og tekst på slide 
 
