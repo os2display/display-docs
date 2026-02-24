@@ -1,5 +1,5 @@
 ---
-title: "Fejlfinding og support"
+title: "Fejl og udviklingsønsker"
 nav_order: 3
 ---
 # Issue Tracker
