@@ -2,9 +2,9 @@
 title: "Fejl og udviklingsønsker"
 nav_order: 3
 ---
-# Issue Tracker
 
-## Fejl og udviklingsønsker
+
+# Fejl og udviklingsønsker
 
 Fejl og udviklingsønsker indberettes som issues på Github enten af kommunen selv eller af kommunens driftsleverandør.
 Beskriv problemet eller forslaget så detaljeret som muligt.
