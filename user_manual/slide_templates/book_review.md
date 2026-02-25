@@ -8,9 +8,11 @@ has_children: false
 
 Denne skabelon har tekst til venstre og billede til højre. Den er oprindelig tænkt som en skabelon til anbefaling af bøger på et bibliotek, men kan bruges til alle typer indhold, hvor man ønsker en kortere tekst til venstre på skærmen, suppleret af et billede til højre. 
 
-![Felter i anmeldelse skabelonen](../../assets/anmeldelse.png)
+![Eksempel på slide med anmeldelse skabelonen](../../assets/anmeldelse-eksempel.png)
 
+![Eksempel på slide med anmeldelse skabelonen](../../assets/anmeldelse-moegmis.png)
 
+## Felter i Anmeldelse-skabelonen
 
 Skabelonen består af felterne: 
 
@@ -34,6 +36,11 @@ Under feltet forfattertekst finder du endnu et billedfelt. Her kan du placere et
 #### Varighed 
 
 Nederst i skabelonen, under Opsætning, angiver du slidets varighed i sekunder.  
+
+![Felter i anmeldelse skabelonen](../../assets/anmeldelse.png)
+
+
+
 
 
 |Fakta om skabelonen           | |

@@ -29,8 +29,8 @@ For hver fysiske skærm skal der oprettes en virtuel skærm i OS2Display. I skæ
 
 ## Brugere 
 
-Menupunktet bruges KUN til administration af eksterne brugere, som har fået adgang via MitID til området. Det kan ikke bruges til manuel oprettelse af ordinære brugere. Menupunktet er kun synligt for administratorer. 
+Menupunktet bruges KUN til administration af eksterne brugere, som har fået adgang via MitID til området. Det kan ikke bruges til manuel oprettelse af ordinære brugere. Menupunktet er kun synligt for administratorer og ekstern brugeradministrator.
 
 ## Indstillinger 
 
-Under Indstillinger findes opsætningen af temaer, som styrer det generelle udseende af slides via CSS, samt opsætningen af datakilder til slides med dynamisk indhold. 
+Under Indstillinger findes opsætningen af temaer, som styrer det generelle udseende af slides via CSS, samt opsætningen af datakilder til slides med dynamisk indhold. Menupunktet er kun synligt for administratorer.
