@@ -14,12 +14,18 @@ nav_order: 3
 * [Client](https://github.com/os2display/display-client/blob/develop/CHANGELOG.md#unreleased)
 * [Templates](https://github.com/os2display/display-templates/blob/develop/CHANGELOG.md#unreleased)
 
+## 2026-03-18
+
+* Released api `2.6.1`. See [2.6.1](https://github.com/os2display/display-api-service/releases/tag/2.6.1).
+* Released admin `2.6.1`. See [2.6.1](https://github.com/os2display/display-admin-client/releases/tag/2.6.1).
+* Released templates `2.6.1`. See [2.6.1](https://github.com/os2display/display-templates/releases/tag/2.6.1).
+
 ## 2025-12-17
 
-* https://github.com/os2display/display-api-service/releases/tag/2.6.0
-* https://github.com/os2display/display-admin-client/releases/tag/2.6.0
-* https://github.com/os2display/display-client/releases/tag/2.3.0
-* https://github.com/os2display/display-templates/releases/tag/2.6.0
+* Released api `2.6.0`. See [changelog](https://github.com/os2display/display-api-service/releases/tag/2.6.0).
+* Released admin `2.6.0`. See [changelog](https://github.com/os2display/display-admin-client/releases/tag/2.6.0).
+* Released client `2.3.0`. See [changelog](https://github.com/os2display/display-client/releases/tag/2.3.0).
+* Released templates `2.6.0`. See [changelog](https://github.com/os2display/display-templates/releases/tag/2.6.0).
 
 ## 2025-09-25
 
