@@ -18,7 +18,7 @@ Det er også muligt at lave **delte spillelister**, som gør det muligt at bruge
 
 ## Opret ny spilleliste 
 
-INDSÆT BILLEDE
+INDSÆT BILLEDE.
 
 #### Spillelistens navn 
 
