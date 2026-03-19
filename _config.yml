@@ -2,8 +2,6 @@ title: OS2display Documentation
 description: Documentation for using, hosting and developing the OS2display project
 theme: just-the-docs
 
-baseurl: "/display-docs"
-
 logo: "/assets/site/os2display_Logo.svg"
 favicon_ico: "/assets/site/favicon.ico"
 
