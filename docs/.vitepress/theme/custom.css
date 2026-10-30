@@ -1,0 +1,98 @@
+/*
+ * OS2 colours, from the styling on os2.eu (were _sass/custom/setup.scss).
+ */
+:root {
+  --os2-logo-black: #2b2523;
+  --os2-text-black: rgb(33, 37, 41);
+  --os2-link: rgb(57, 115, 175);
+  --os2-green: #58b257;
+
+  --vp-c-brand-1: var(--os2-link);
+  --vp-c-brand-2: #2f6296;
+  --vp-c-brand-3: #26507b;
+  --vp-c-brand-soft: rgba(57, 115, 175, 0.14);
+
+  --vp-c-tip-1: var(--os2-green);
+  --vp-c-tip-soft: rgba(88, 178, 87, 0.14);
+
+  --vp-c-text-1: var(--os2-text-black);
+  /* Montserrat is not loaded as a web font; it is used when installed. */
+  --vp-font-family-base: 'Montserrat', 'Odoo Unicode Support Noto', sans-serif;
+  --vp-sidebar-bg-color: #fff;
+}
+
+.VPNavBarTitle .logo {
+  height: var(--vp-nav-height);
+  width: auto;
+  padding: 12px 0;
+}
+
+.VPNavBar .title,
+.VPNavBar .divider-line {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.VPSidebarItem:not(.is-active) > .item .text {
+  color: var(--os2-text-black);
+}
+
+/* Link buttons, e.g. [Text](url){.btn .btn-purple} */
+.vp-doc a.btn {
+  display: inline-block;
+  padding: 0.4em 1em;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--os2-green);
+}
+
+.vp-doc a.btn-purple {
+  background-color: #7253ed;
+}
+
+.vp-doc a.btn:hover {
+  filter: brightness(0.9);
+}
+
+/* Front page */
+.frontpage {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .frontpage {
+    grid-template-columns: 1fr;
+  }
+}
+
+.frontpage .box,
+.news-item {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background-color: var(--vp-c-bg-soft);
+}
+
+.frontpage .box > a {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.news-item .news-title {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.news-item .news-date {
+  margin: 4px 0;
+  font-size: 0.875em;
+  color: var(--vp-c-text-2);
+}
+
+.news-item .news-summary {
+  margin: 0;
+}
