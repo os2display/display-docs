@@ -16,7 +16,25 @@ The other part is in the admin where the data can be exposed to the user.
 
 ## Setup
 
-### API
+### 3.x
+
+Set these environment variables:
+
+```dotenv
+# Enable tracking screen information.
+TRACK_SCREEN_INFO=true
+# Data will only be updated with this interval:
+TRACK_SCREEN_INFO_UPDATE_INTERVAL_SECONDS=300
+# Enable screen information in Admin.
+ADMIN_SHOW_SCREEN_STATUS=true
+```
+
+From 3.0 the admin no longer uses `public/config.json`, and the 2.x infrastructure's `APP_` prefixed variables are
+gone: set the variables above directly.
+
+### 2.x (legacy)
+
+#### API
 
 Enable tracking latest requests from the screen clients in the API by setting the following values in `.env.local`:
 
@@ -33,7 +51,7 @@ APP_TRACK_SCREEN_INFO=true
 APP_TRACK_SCREEN_INFO_UPDATE_INTERVAL_SECONDS=300
 ```
 
-### Admin
+#### Admin
 
 Set the following value in public/config.json to enable showing screen status information in the Admin.
 

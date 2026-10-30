@@ -8,12 +8,81 @@ has_children: false
 
 # Hosting
 
-## Basics
+This page describes hosting OS2display 3.x. Installations still on 2.x will find the previous instructions under
+[2.x (legacy)](#2x-legacy).
+
+## 3.x
+
+From 3.0 OS2display is one Symfony application,
+[os2display/os2display](https://github.com/os2display/os2display), which serves the API, the admin at `/admin` and
+the screen client at `/client`. There are no separate admin or client applications to host.
+
+### Requirements
+
+- PHP 8.4 (fpm) with the extensions listed in `composer.json`, including **imagick**.
+- MariaDB (10.11 or 11.4).
+- A cache backend: Redis by default, or memcached, the database, the filesystem or APCu (`CACHE_ADAPTER`).
+- nginx (or another webserver) in front of PHP-FPM.
+
+The published container images include everything except the database and cache. See
+[Hosting requirements](https://github.com/os2display/os2display#hosting-requirements) for the details.
+
+### Hosting options
+
+- **os2display-docker-server**: [os2display-docker-server](https://github.com/os2display/os2display-docker-server)
+  is a ready-made docker compose setup with the published images, an optional bundled MariaDB and Traefik, and tasks
+  for installing, updating and operating the stack.
+- **Published images**: run the two images in your own container setup.
+  - `ghcr.io/os2display/os2display`: the PHP-FPM application.
+  - `ghcr.io/os2display/os2display-nginx`: nginx serving static files and forwarding PHP requests.
+
+  Images are tagged with the release version (e.g. `3.0.0`); `latest` is the newest 3.x release and `develop`
+  the development branch.
+- **Release tarball**: every [release](https://github.com/os2display/os2display/releases) has a pre-built
+  `os2display-<version>.tar.gz` with PHP dependencies and the built frontend, for a classic PHP + nginx setup.
+- **Checked-out repository**: build and run the code yourself.
+
+### Configuration
+
+All configuration is set as environment variables, including the admin (`ADMIN_*`) and client (`CLIENT_*`)
+settings that were `config.json` files in 2.x. The application's `.env` file documents every variable. With the
+images, set them on the running container rather than editing the `.env` files in the image.
+
+At minimum set `APP_ENV=prod`, `APP_SECRET`, `DATABASE_URL` and `JWT_PASSPHRASE`, generate a JWT keypair, and keep
+`config/jwt/` and `public/media/` on persistent storage.
+
+After every deploy, run `app:update` to apply database migrations and install the bundled templates and screen
+layouts:
+
+```sh
+bin/console app:update --no-interaction
+```
+
+Create the first tenant and users with `bin/console app:tenant:add` and `bin/console app:user:add`. Users who log
+in with OpenID Connect get their tenants from their claims; see
+[OIDC providers](https://github.com/os2display/os2display#oidc-providers) and the [SSO setup guide](sso_setup/sso_setup).
+
+See [Production setup](https://github.com/os2display/os2display#production-setup) and
+[Configuration](https://github.com/os2display/os2display#configuration) in the README for the full reference.
+
+### Upgrading from 2.x
+
+Follow the [upgrade guide](https://github.com/os2display/os2display/blob/main/UPGRADE.md). It covers exporting the
+2.x configuration (with `app:utils:convert-env-to-3x` in 2.8), the database migration and each hosting option.
+os2display-docker-server installations should first update to
+[1.2.0](https://github.com/os2display/os2display-docker-server/releases/tag/1.2.0) and then follow its
+[UPGRADE.md](https://github.com/os2display/os2display-docker-server/blob/main/UPGRADE.md).
+
+## 2.x (legacy)
+
+In 2.x the API, the admin client and the screen client are separate applications.
+
+### Basics
 To host the API you will need to be able to host a Symfony application with a MariaDB database and a caching layer. You should be famliar with the basics of deploying Symfony: [How to Deploy a Symfony Application](https://symfony.com/doc/current/deployment.html)
 
 To host the Display Client and the Admin Client you need to be able to host standard react applications. You should be familiar with [Create React App - Deployment](https://create-react-app.dev/docs/deployment/)
 
-## Docker based hosting
+### Docker based hosting
 Docker images are built automatically for all three apps by Github Actions. They are tagged as follows:
 - `latest` most recent tag on main branch
 - `x.y.z` version tag on main branch
@@ -28,17 +97,17 @@ The images are published to as:
 An example of how to host the images can be seen at https://github.com/os2display/display-docker-server
 
 
-## General Hosting
+### General Hosting
 If you don't want to use the pre-built images, or have other hosting requirements these are the general instructions.
 
-### Api
+#### Api
 The Symfony application expects to be hosted at the root of your application domain. E.g. http://demo.os2display.dk/
 
 The api will be availiable at `/api/v1`. OpenApi documnetation at `/docs` and uploaded `/media` at `/media`
 
 To host the api you need a webserver that can host PHP applications such as nginx. A MariaDB database and a Redis server for caching. 
 
-#### Installation
+##### Installation
 Check out the repository in your folder of choice. 
 
 Make a `.env.local` file by copying the include `.env` file. Edit the `env.local` and set the relevant values for your environment. Specifically you need to set the `DATABASE_URL` to point to your MariaDB and `REDIS_CACHE_DSN` to point to a Redis instance for application caching.
@@ -60,16 +129,16 @@ APP_ENV=prod APP_DEBUG=0 php bin/console lexik:jwt:generate-keypair
 
 Refer Symfonys documentation for general best practises for deployment.
 
-#### Things to note
+##### Things to note
 
-##### Tenants
+###### Tenants
 The application is build to support hosting multiple "tenants" in one installation. All content will scoped by tenant and cannot be seen by users from other tenants unless it is actively shared. To start using your installation you should first make a tenant using the `php bin/console app:tenant:add` command. Then create users with `php bin/console app:user:add`. Currently users created with this command are given access to all existing tenants.
 
 For users who log in via OpenId Connect tenants are created automatically by the roles given as claims.
 
 No further "manual" user management is currently supported.
 
-##### Authentication
+###### Authentication
 Api Authentication is done using JWT. For the api to be able to issue JWT tokens you need to configure [LexikJWTAuthenticationBundle](https://github.com/lexik/LexikJWTAuthenticationBundle) correctly in the `.env.local` file. At minimum you set a custom value for `JWT_PASSPHRASE`. You can also customise the token lifetime if needed through `JWT_TOKEN_TTL`
 
 ```env
@@ -85,7 +154,7 @@ Refer to the bundles documentation for further options.
 
 OpenId Connect is supported through [AzureB2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/openid-connect). Other OPenID providers should work but are not tested. When using OpenId Connect the api expects roles to come in the format `<tenantKey>Redaktør` and `<tenantKeyAdmin>` e.g dokk1Admin for an user with role admin for the dokk1 tenant. This is currently not configurable.
 
-### Display Client
+#### Display Client
 This is the client to run on your displays (screens). Simply check out the repository and run `RUN yarn install && yarn build`. This will create a production build. The Display Client expects to be hosted at `/client`.
 
 After building you should create a `config.json` file and a `release.json` file. When booting the client will lock for these at `/client/config.json` and `/client/release.json` respectivly. You can create them by copying the examples files in `/public`.
@@ -123,7 +192,7 @@ And adapt the values in `release.json` to match your build (this is build automa
 
 All screen clients will check `releaseTimestamp` value at an interval and reload themselves if they see a new version. 
 
-### Admin Client
+#### Admin Client
 This is the client the users accesses to create and schedule content. Simply check out the repository and run `RUN yarn install && yarn build`. This will create a production build. The Admin Client expects to be hosted at `/admin`.
 
 After building you should create a `config.json` file and a `access-config.json` file. When booting the client will lock for these at `/client/config.json` and `/client/access-config.json` respectivly. You can create them by copying the examples files in `/public`.

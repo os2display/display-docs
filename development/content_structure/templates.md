@@ -7,9 +7,60 @@ nav_order: 2
 
 # Templates
 
+This page describes templates in OS2display 3.x. Templates for 2.x are described under
+[2.x (legacy)](#2x-legacy).
+
+## 3.x
+
+From 3.0 templates are part of the application code: they are no longer compiled separately and loaded from
+external URLs with remote components.
+
+- Core templates live in
+  [`assets/shared/templates/`](https://github.com/os2display/os2display/tree/main/assets/shared/templates).
+- Custom templates for an installation go in `assets/shared/custom-templates/` (gitignored) and are built together
+  with the core templates. See `assets/shared/custom-templates-example/` for an example.
+
+List, install and remove templates with:
+
+```sh
+bin/console app:templates:list
+bin/console app:templates:install --all
+bin/console app:templates:remove <TEMPLATE_ULID>
+```
+
+`app:update` installs and updates all templates. In dev mode the `/template` route previews each template with its
+fixtures.
+
+### How to create a template
+
+A template is a `.jsx` module and a `.json` configuration file with the same name. The `.jsx` module exports:
+
+- `id()`: the template's ULID (generate one with `bin/console app:utils:generate-ulid`).
+- `config()`: the template's `id`, `title` (shown in the admin), `options` and `adminForm`.
+- `renderSlide(slide, run, slideDone)`: returns the JSX for the slide.
+  - **slide**: the slide data from the API.
+  - **run**: a date string that is set when the slide should start executing.
+  - **slideDone**: a function the slide calls when it is done.
+
+The slide is responsible for signalling that it is done by calling `slideDone()`. For a slide that runs for a fixed
+duration, use the `useBaseSlideExecution` hook; for a slide that steps through entries, such as feed items, use
+`useMultipleEntrySlideExecution`. They replace the 2.x `BaseSlideExecution` class.
+
+The admin form (`config().adminForm`) uses the same field types as in 2.x; see
+[The admin description](#the-admin-description) below.
+
+Dark mode, screen orientation and video autoplay work as described for 2.x below. The `color-scheme-dark` class is
+set by the client.
+
+See [Custom Templates](https://github.com/os2display/os2display#custom-templates) in the README for the full
+reference, and the [upgrade guide](https://github.com/os2display/os2display/blob/main/UPGRADE.md) for converting
+external 2.x templates.
+
+## 2.x (legacy)
+
 See [https://github.com/os2display/display-templates](https://github.com/os2display/display-templates) for core templates.
 
-## How to create a template
+### How to create a template
 
 The templates are injected with react [remote component](https://github.com/Paciolan/remote-component).
 The components that are loaded in the client should be compiled before.
@@ -17,7 +68,7 @@ See https://github.com/os2display/display-templates for how to compile templates
 
 The client loads a compiled react component. The template is describes as json files.
 
-### Json files
+#### Json files
 
 An example of the required .json files is [Image text](https://github.com/os2display/display-templates/tree/develop/build/image-text).
 
@@ -29,7 +80,7 @@ An example of the required .json files is [Image text](https://github.com/os2dis
 
 See [https://github.com/os2display/display-templates](https://github.com/os2display/display-templates) for how to add a new template to the repository.
 
-### The component
+#### The component
 
 A component will be created like below
 
@@ -73,13 +124,13 @@ useEffect(() => {
 }, [run]);
 ```
 
-### Dark mode
+#### Dark mode
 
 A screen can be configured to change color scheme (light/dark) at sunset and sunrise.
 To support this a class ("color-scheme-dark") is set on the html root when dark mode
 is active. See https://github.com/os2display/display-templates/blob/develop/src/GlobalStyles.js#L170.
 
-### Screen orientation
+#### Screen orientation
 
 To handle screens in both Landscape and Portrait mode it is preferred to use the orientation media-query.
 
@@ -90,11 +141,11 @@ Styling for Portrait can be placed inside a query like this:
 ```
 
 
-### Video
+#### Video
 
 When using the video template the video will not play in the client unless the autoplay flag is enabled in the chrome configuration.
 
-### The admin description.
+#### The admin description.
 
 To populate the slide with data an admin form is needed.
 
