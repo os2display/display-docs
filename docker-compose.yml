@@ -9,5 +9,20 @@ services:
       - ./:/app:delegated
       - node_modules:/app/node_modules
 
+  # Code checks tools
+  markdownlint:
+    image: itkdev/markdownlint
+    profiles:
+      - dev
+    volumes:
+      - ./:/md
+
+  prettier:
+    image: jauderho/prettier
+    profiles:
+      - dev
+    volumes:
+      - ./:/work
+
 volumes:
   node_modules:

@@ -1,0 +1,33 @@
+# Originally synced from
+# https://github.com/itk-dev/devops_itkdev-docker
+# Local edit: no external "frontend" docker network is needed here.
+
+### ### YAML
+###
+### Validates YAML files.
+###
+### #### Assumptions
+###
+### 1. A docker compose service named `prettier` for running
+###    [Prettier](https://prettier.io/) exists.
+
+name: YAML
+
+on:
+  pull_request:
+    paths: &paths
+      - "**/*.yml"
+      - "**/*.yaml"
+  push:
+    branches:
+      - main
+    paths: *paths
+
+jobs:
+  yaml-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - run: |
+          docker compose run --rm prettier '**/*.{yml,yaml}' --check
