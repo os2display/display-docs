@@ -16,6 +16,11 @@ flowchart LR
     B <--> C(Client)
 ```
 
+From 3.0 all three components are part of one application,
+[os2display/os2display](https://github.com/os2display/os2display): the Symfony API, plus the admin and client
+React applications in `assets/admin` and `assets/client`, served at `/admin` and `/client`. In 2.x they were
+separate repositories (`display-api-service`, `display-admin-client` and `display-client`).
+
 ## API service
 
 This is the main component of the system. All content is created/retrieved through api calls to the API service.
@@ -26,7 +31,8 @@ See [security.md](api-service/security) for further description of the security 
 ## Admin
 
 This is where content, connections and screens are created and connected.
-[Go to description of admin elements](https://github.com/os2display/display-admin-client#system-description).
+See [Content Structure](https://github.com/os2display/os2display#content-structure) in the README for how the
+admin elements relate.
 The admin is built with [React](https://reactjs.org/).
 See [admin.md](admin) for further descriptions.
 

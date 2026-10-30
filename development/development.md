@@ -8,6 +8,50 @@ has_children: false
 
 # Development Setup
 
+This page describes the development setup for OS2display 3.x. The 2.x setup with four separate repositories is
+described under [2.x (legacy)](#2x-legacy).
+
+## 3.x
+
+From 3.0 the API, admin, client and templates live in one repository,
+[os2display/os2display](https://github.com/os2display/os2display). The admin, client and templates are React
+applications in `assets/` (`assets/admin`, `assets/client`, `assets/shared/templates`), built with Vite and served
+by the Symfony application at `/admin` and `/client`.
+
+### Prerequisites
+
+- [Docker](https://www.docker.com/) with Docker Compose.
+- [Task](https://taskfile.dev/) for running the project commands.
+- A reverse proxy mapping the local domain (default `display.local.itkdev.dk`, set with `COMPOSE_DOMAIN`) to the
+  stack. The stack can also run its own Traefik.
+
+PHP and Node run in the containers, so they are not needed on the host.
+
+### Getting started
+
+```shell
+git clone https://github.com/os2display/os2display
+cd os2display
+
+# Install everything and load fixtures
+task site-install-with-fixtures
+```
+
+The fixtures include an admin user (`admin@example.com`) and an editor user (`editor@example.com`), both with the
+password `apassword`.
+
+Run `task` to list the available tasks, for example `task test:api`, `task test:unit`, `task test:frontend-local`
+and `task coding-standards:check`.
+
+In dev mode the `/template` route previews how each template renders with its fixtures. Templates and screen
+layouts are installed with `bin/console app:templates:install --all` and `bin/console app:screen-layouts:install --all`
+(both part of `app:update`).
+
+See [Development setup](https://github.com/os2display/os2display#development-setup) in the README for the details,
+including the frontend dev server and local HTTPS.
+
+## 2.x (legacy)
+
 To work on the complete system with API, admin, client and templates each project's docker-compose file should be started.
 
 The templates should be installed with the `-dev.json` file. This is done with the command in the API docker container:
@@ -36,7 +80,7 @@ git clone --branch develop https://github.com/os2display/display-client
 git clone --branch develop https://github.com/os2display/display-templates
 ```
 
-## API
+### API
 
 Cf. <display-api-service/README.md>.
 
@@ -63,7 +107,7 @@ docker compose --project-name displayapiservice exec phpfpm bin/console lexik:jw
 cd
 ```
 
-### Test the API
+#### Test the API
 
 ```shell
 export OS2DISPLAY_API_URL="http://$(docker compose --project-name displayapiservice port nginx 8080)"
@@ -98,7 +142,7 @@ EOF
 cd
 ```
 
-## Admin
+### Admin
 
 Cf. <display-admin-client/README.md>.
 
@@ -116,7 +160,7 @@ open "http://$(docker compose port nginx 8080)/admin"
 cd
 ```
 
-## Client
+### Client
 
 Cf. <display-client/README.md>.
 
@@ -144,7 +188,7 @@ open "http://$(docker compose --project-name display-admin-client port nginx 808
 
 After connecting the client to a screen, the client should start displaying content.
 
-## Templates
+### Templates
 
 Cf. <display-templates/README.md>.
 
