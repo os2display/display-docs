@@ -13,7 +13,7 @@ has_children: false
 Visse enheder kan have problemer med at indlæse klienten korrekt, hvis netværksforbindelsen først bliver oprettet efter indlæsning af klienten er påbegyndt. 
 I Aarhus anvendes et fix, hvor alle maskiner starter op med en online check-side, som først videresender til den korrekte URL, når der er opnået forbindelse til netværket. 
 
-[History for public/online-check/index.html - os2display/display-client · GitHub](https://github.com/os2display/display-client/commits/develop/public/online-check/index.html)
+[History for public/client/online-check/index.html - os2display/os2display · GitHub](https://github.com/os2display/os2display/commits/main/public/client/online-check/index.html)
  
  
 ### Sådan finder du versionsnummer på OS2Display  

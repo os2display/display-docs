@@ -13,9 +13,9 @@ This documentation will guide you through the setup of Single Sign-On (hereinaft
 OS2display supports SSO via OpenID Connect, which both Azure and OS2faktor can use. You will find guides for setup in both Azure and OS2faktor further down in this documentation.
 
 This guide consists of these topics
-* [Setup in OS2display](https://os2display.github.io/display-docs/sso_setup/sso_setup.html#setup-in-os2display)
-* [Setup in Azure](https://os2display.github.io/display-docs/sso_setup/sso_setup.html#setup-in-azure)
-* [Setup in OS2faktor](https://os2display.github.io/display-docs/sso_setup/sso_setup.html#setup-in-os2faktor)
+* [Setup in OS2display](#setup-in-os2display)
+* [Setup in Azure](#setup-in-azure)
+* [Setup in OS2faktor](#setup-in-os2faktor)
 
 <a name="setup-in-os2display"></a>
 ## Setup in OS2display
