@@ -9,10 +9,34 @@ nav_order: 3
 
 ## Unreleased changes (currently in test)
 
-* [API](https://github.com/os2display/display-api-service/blob/develop/CHANGELOG.md#unreleased)
-* [Admin](https://github.com/os2display/display-admin-client/blob/develop/CHANGELOG.md#unreleased)
-* [Client](https://github.com/os2display/display-client/blob/develop/CHANGELOG.md#unreleased)
-* [Templates](https://github.com/os2display/display-templates/blob/develop/CHANGELOG.md#unreleased)
+* [OS2display](https://github.com/os2display/os2display/blob/develop/CHANGELOG.md#unreleased)
+
+## 2026-10-30
+
+* Released OS2display `3.0.0`. The API, admin, client and templates are now one application in
+  [os2display/os2display](https://github.com/os2display/os2display) (renamed from `display-api-service`), with images
+  on GHCR. See [3.0.0](https://github.com/os2display/os2display/releases/tag/3.0.0) and the
+  [upgrade guide](https://github.com/os2display/os2display/blob/main/UPGRADE.md).
+* Released os2display-docker-server `3.0.0` for hosting 3.0. See
+  [3.0.0](https://github.com/os2display/os2display-docker-server/releases/tag/3.0.0).
+* Released os2display-docker-server `1.2.0` with the tools to prepare a 1.x stack for the 3.0 upgrade. See
+  [1.2.0](https://github.com/os2display/os2display-docker-server/releases/tag/1.2.0).
+
+## 2026-10-26
+
+* Released api `2.8.4`. See [2.8.4](https://github.com/os2display/os2display/releases/tag/2.8.4).
+* Released api `2.7.4`. See [2.7.4](https://github.com/os2display/os2display/releases/tag/2.7.4).
+* Released api `2.6.4`. See [2.6.4](https://github.com/os2display/os2display/releases/tag/2.6.4).
+
+## 2026-10-21
+
+* Released api `2.8.3`. See [2.8.3](https://github.com/os2display/os2display/releases/tag/2.8.3).
+* Released api `2.7.3`. See [2.7.3](https://github.com/os2display/os2display/releases/tag/2.7.3).
+* Released api `2.6.3`. See [2.6.3](https://github.com/os2display/os2display/releases/tag/2.6.3).
+
+## 2026-10-07
+
+* Released api `2.8.2`. See [2.8.2](https://github.com/os2display/os2display/releases/tag/2.8.2).
 
 ## 2026-08-24
 
