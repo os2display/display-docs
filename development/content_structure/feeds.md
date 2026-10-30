@@ -18,8 +18,8 @@ The FeedType supplies functions for fetching data and configuring the Feed.
 ## Create a new FeedType.
 
 To implement a new FeedType, create a class that implements
-[FeedTypeInterface](https://github.com/os2display/display-api-service/blob/develop/src/Feed/FeedTypeInterface.php)
-in API Service.
+[FeedTypeInterface](https://github.com/os2display/os2display/blob/main/src/Feed/FeedTypeInterface.php)
+in the OS2display application.
 
 ## Create a Feed Source
 

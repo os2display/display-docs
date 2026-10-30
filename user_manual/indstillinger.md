@@ -13,7 +13,7 @@ has_children: false
 Under temaer kan man oprette og redigere temaer tilhørende det aktuelle område. Temaer definerer måden, som blandt andet skrifttyper og farver præsenterer sig i slide-skabelonerne. 
 Der anvendes css, hvor alle kodelinjer indledes med #SLIDE_ID.  
 
-Se https://github.com/os2display/display-templates/tree/main/src/themes for flere detaljer og eksempler. 
+Se https://github.com/os2display/os2display/blob/main/docs/themes/themes.md for flere detaljer og eksempler. 
 
 Under tema kan man også tilføje en grafikfil til logo, som anvendes af visse slide-skabeloner. 
 
