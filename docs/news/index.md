@@ -1,0 +1,7 @@
+---
+title: Nyheder
+---
+
+# Nyheder
+
+<NewsList />
