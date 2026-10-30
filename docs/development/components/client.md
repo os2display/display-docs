@@ -29,6 +29,6 @@ See [https://github.com/os2display/display-client/blob/develop/src/region.js](ht
 
 ## Event Model
 
-![Event model](../assets/client-event-model.png)
+![Event model](../../assets/client-event-model.png)
 
 TODO: Make sure this drawing is up-to-date.

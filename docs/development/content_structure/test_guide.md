@@ -92,12 +92,12 @@ This guide requires a user that has the `ROLE_ADMIN` role.
 ### Description
 
 This guide tests that the different supported templates can be created.
-This guide assumes that all templates from [https://github.com/os2display/display-templates/]()
+This guide assumes that all templates from [https://github.com/os2display/display-templates/](https://github.com/os2display/display-templates/)
 have been added to the installation.
 
 ### Steps
 
-* "Anmeldelse" (expected result [anmeldelse.png](../assets/templates/anmeldelse.png))
+* "Anmeldelse" (expected result [anmeldelse.png](../../assets/templates/anmeldelse.png))
   * `Use Case: Show a review of book, film, etc.`
   * Navigate to `/admin/slide/create`.
   * Fill "Slidets navn".
@@ -107,7 +107,7 @@ have been added to the installation.
   * Fill "Forfattertekst"
   * Upload an image under "Billede".
   * Click "Gem slide"
-* "Billede og tekst" (expected result [billede-og-tekst.png](../assets/templates/billede-og-tekst.png))
+* "Billede og tekst" (expected result [billede-og-tekst.png](../../assets/templates/billede-og-tekst.png))
   * `Use Case: Show image(s) and/or text.`
   * Navigate to `/admin/slide/create`.
   * Fill "Slidets navn".
@@ -120,7 +120,7 @@ have been added to the installation.
   * Enable "Deaktiver fade ved flere billeder" and see in the preview that the fade effect gone between images.
   * NB! The settings regarding logo are dependent on setting a theme with a theme logo. This will be tested in T4.
   * Click "Gem slide".
-* "Iframe" (expected result [iframe.png](../assets/templates/iframe.png))
+* "Iframe" (expected result [iframe.png](../../assets/templates/iframe.png))
   * `Use Case: Show content from an external url.`
   * Navigate to `/admin/slide/create`.
   * Fill "Slidets navn".
@@ -186,7 +186,7 @@ have been added to the installation.
   * Test the different filters. Find a case where multiple events appear.
   * Save the slide.
   * See that the expected events are shown in the slide.
-* "Rejseplanen" (expected result [rejseplanen.png](../assets/templates/rejseplanen.png))
+* "Rejseplanen" (expected result [rejseplanen.png](../../assets/templates/rejseplanen.png))
   * `Use Case: Show which public transportation is available from a given location with rejseplanen.dk.`
   * NB! This guide assumes that the admin has been configured with a valid rejseplanen api key. See example config:
     https://github.com/os2display/display-admin-client/blob/develop/public/example_config.json#L4
