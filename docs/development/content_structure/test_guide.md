@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Testing Guide
-parent: Content Structure
-nav_order: 5
 ---
 
 # Testing Guide

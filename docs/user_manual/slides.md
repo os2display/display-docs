@@ -1,9 +1,5 @@
 ---
 title: Slides
-layout: default
-parent: Sådan bruger du OS2Display
-nav_order: 5
-has_children: false
 ---
 
 ## Oversigt 

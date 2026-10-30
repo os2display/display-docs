@@ -1,8 +1,5 @@
 ---
 title: Instagram Feed
-layout: default
-parent: Slideskabeloner
-has_children: false
 ---
 # Instagram Feed
 

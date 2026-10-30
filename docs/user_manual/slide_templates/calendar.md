@@ -1,8 +1,5 @@
 ---
 title: Kalender
-layout: default
-parent: Slideskabeloner
-has_children: false
 ---
 # Kalender
 Kalenderskabelonen bruges til at vise, hvad der foregår i lokaler hentet automatisk fra en booking-datakilde. 

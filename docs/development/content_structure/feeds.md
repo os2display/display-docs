@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Feeds
-parent: Content Structure
-nav_order: 3
 ---
 
 # Feeds

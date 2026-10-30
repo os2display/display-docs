@@ -1,9 +1,5 @@
 ---
 title: Indstillinger
-layout: default
-parent: Sådan bruger du OS2Display
-nav_order: 11
-has_children: false
 ---
 
 # Indstillinger

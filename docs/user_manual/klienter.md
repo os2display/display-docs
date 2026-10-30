@@ -1,9 +1,5 @@
 ---
 title: Klienter
-layout: default
-parent: Sådan bruger du OS2Display
-nav_order: 12
-has_children: false
 ---
 
 # Klienter

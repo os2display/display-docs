@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Layouts
-parent: Content Structure
-nav_order: 1
 ---
 
 # Layouts

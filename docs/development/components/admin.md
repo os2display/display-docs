@@ -1,9 +1,5 @@
 ---
-layout: default
 title: Admin (Editor)
-parent: Components
-has_children: true
-nav_order: 2
 ---
 
 # Admin

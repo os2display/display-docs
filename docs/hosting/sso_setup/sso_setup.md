@@ -1,9 +1,5 @@
 ---
 title: SSO Setup
-layout: default
-parent: For driftsleverandører
-nav_order: 4
-has_children: false
 ---
 
 # SSO setup

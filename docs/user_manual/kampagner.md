@@ -1,9 +1,5 @@
 ---
 title: Kampagner
-layout: default
-parent: Sådan bruger du OS2Display
-nav_order: 7
-has_children: false
 ---
 
 # Kampagner 

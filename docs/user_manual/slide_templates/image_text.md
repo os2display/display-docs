@@ -1,8 +1,5 @@
 ---
 title: Billede og tekst
-layout: default
-parent: Slideskabeloner
-has_children: false
 ---
 # Billede og tekst
 

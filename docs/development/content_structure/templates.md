@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Templates
-parent: Content Structure
-nav_order: 2
 ---
 
 # Templates

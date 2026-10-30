@@ -1,8 +1,5 @@
 ---
 title: Changelog
-layout: default
-parent: For driftsleverandører
-nav_order: 3
 ---
 
 # Changelog

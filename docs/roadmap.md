@@ -1,8 +1,9 @@
 ---
 title: Roadmap
-layout: default
-redirect_to: /
-nav_exclude: true
+head:
+  - - meta
+    - http-equiv: refresh
+      content: 0; url=/
 ---
 
 # Roadmap

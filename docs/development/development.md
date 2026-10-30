@@ -1,9 +1,5 @@
 ---
 title: Development Setup
-layout: default
-parent: Udvikling
-nav_order: 1
-has_children: false
 ---
 
 # Development Setup

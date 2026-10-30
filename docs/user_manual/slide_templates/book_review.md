@@ -1,8 +1,5 @@
 ---
 title: Anmeldelse
-layout: default
-parent: Slideskabeloner
-has_children: false
 ---
 # Anmeldelse
 

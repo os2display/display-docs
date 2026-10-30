@@ -1,9 +1,5 @@
 ---
 title: Content Structure
-layout: default
-parent: Udvikling
-nav_order: 2
-has_children: true
 ---
 
 # Content Structure
@@ -24,22 +20,22 @@ has_children: true
 flowchart LR
     Slide -->|1| D[Theme]
     Slide -->|1| E[Template]
-    Slide -->|fa:fa-asterisk| F[Media]
+    Slide -->|*| F[Media]
 ```
 
 ```mermaid
 flowchart LR
-    Screen-->|fa:fa-asterisk|Layout
-    Layout -->|fa:fa-asterisk|Playlist
-    Playlist -->|fa:fa-asterisk|Slide
+    Screen-->|*|Layout
+    Layout -->|*|Playlist
+    Playlist -->|*|Slide
 
-    Screen-->|fa:fa-asterisk|G[Campaign]
-    G -->|fa:fa-asterisk|H[Slide]
+    Screen-->|*|G[Campaign]
+    G -->|*|H[Slide]
 
-    Screen-->|fa:fa-asterisk|Group
+    Screen-->|*|Group
 
-    Group-->|fa:fa-asterisk|L[Campaign]
-    L -->|fa:fa-asterisk| M[Slide]
+    Group-->|*|L[Campaign]
+    L -->|*| M[Slide]
 
 ```
 

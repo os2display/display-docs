@@ -1,8 +1,5 @@
 ---
-layout: default
 title: API
-parent: Components
-nav_order: 1
 ---
 
 # API service

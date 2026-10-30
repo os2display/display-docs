@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Screen status
-parent: Content Structure
-nav_order: 8
 ---
 
 # Screen status

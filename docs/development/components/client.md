@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Client (Screen) 
-parent: Components
-nav_order: 3
 ---
 
 # Client

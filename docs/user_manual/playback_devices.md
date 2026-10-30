@@ -1,9 +1,5 @@
 ---
 title: Afspilningsenheder
-layout: default
-parent: Sådan bruger du OS2Display
-nav_order: 50
-has_children: false
 ---
 
 OS2Display kan bruges med mange forskellige afspilningsenheder.

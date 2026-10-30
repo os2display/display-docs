@@ -1,9 +1,5 @@
 ---
 title: Components
-layout: default
-parent: Udvikling
-nav_order: 2
-has_children: true
 ---
 
 # Components
