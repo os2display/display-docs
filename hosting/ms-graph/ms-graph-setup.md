@@ -11,7 +11,7 @@ All Graph paths below use the base URL `https://graph.microsoft.com/v1.0`.
 | **POST** `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token` | Obtain an app-only access token using the saved Client ID and Client Secret. | Before any Graph request, if no cached token is available. |
 | **GET** `/places/microsoft.graph.roomlist` | Get room lists—the optional groupings shown as “Lokationer”. | When opening an existing feed source’s configuration form. The browser requests `/v2/feed-sources/{id}/config/locations`. |
 | **GET** `/places/microsoft.graph.room` | Get all rooms. | When the slide’s room selector loads, if no locations are selected on the feed source. The browser requests `/v2/feed-sources/{id}/config/resources`. |
-| **GET** `/places/{roomListEmail}/microsoft.graph.rooms` | Get rooms belonging to a selected room list. | Instead of the all-rooms request, when locations are selected. One lookup per selected room list. This is the path currently coded. |
+| **GET** `GET /places/{roomListEmail}/microsoft.graph.roomlist/rooms` | Get rooms belonging to a selected room list. | Instead of the all-rooms request, when locations are selected. One lookup per selected room list. |
 | **GET** `/users/{roomEmail}/calendarView` | Get bookings for an individual room. | When a preview or screen requests `/v2/feeds/{id}/data` and the feed cache needs refreshing. One calendar lookup per selected room. |
 
 The requests are implemented in [ApiClient.php](src/Feed/SourceType/MsGraph/ApiClient.php).
