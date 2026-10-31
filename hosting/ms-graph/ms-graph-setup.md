@@ -51,3 +51,50 @@ A UI action does not necessarily cause an external request:
 Room discovery uses pages of 100, following `@odata.nextLink` or explicitly requesting `$skip=100`, `$skip=200`, etc. when Graph omits the link. Calendar requests follow `@odata.nextLink` when bookings span multiple pages.
 
 Simply selecting a room or choosing the “one room” layout does not fetch its bookings. Bookings are fetched when the preview/client requests the feed data. The layout changes presentation, not the Graph endpoint or date window.
+
+## No room list is returned
+Room lists are entirely optional. You can have meeting rooms without having any room lists at all.
+
+In Microsoft 365 / Exchange:
+- A room is an individual room mailbox.
+- A room list is an optional grouping of room mailboxes.
+- Creating a room mailbox does not automatically require adding it to a room list.
+- A tenant can have rooms but zero room lists.
+If you want rooms grouped by location, your Exchange administrator needs to configure Room Lists containing the relevant room mailboxes.
+
+
+## How room lists are used
+
+Room lists are an optional filter, not a requirement for discovering rooms.
+
+### Without room lists
+
+```text
+GET /places/microsoft.graph.room
+→ Returns all rooms Microsoft Graph exposes in the tenant
+→ User selects specific rooms in the slide’s feed configuration
+→ Bookings are fetched for those selected rooms only
+```
+
+The `/places/microsoft.graph.room` endpoint does not need room IDs or room-list names as input. Each returned room includes an email address, which we then use to request its calendar:
+
+```text
+GET /users/{roomEmail}/calendarView
+```
+
+### With room lists selected
+
+```text
+Selected room lists on the feed source
+→ Fetch rooms belonging to those lists
+→ Only those rooms appear in the slide’s room selector
+→ Fetch bookings for the rooms the user selects
+```
+
+## Two levels of selection
+
+| Setting | Purpose |
+|---|---|
+| **Lokalelister on the feed source** | Optionally restrict which rooms editors can choose from. No selection means all discovered rooms. |
+| **Lokaler on the slide’s feed** | Select the actual rooms whose bookings should be displayed. |
+
